@@ -41,6 +41,7 @@ export const notesSlice = createSlice({
         toast.success("updated successfuly");
       }
     },
+    
     resetALLNotes:(state, action)=>{
       state.value= [];
       localStorage.removeItem("notes");
