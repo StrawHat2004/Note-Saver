@@ -1,6 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink, useParams, useSearchParams } from 'react-router-dom';
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 
 const View = () => {
     const {id} = useParams(); 
@@ -16,7 +20,12 @@ const View = () => {
                 <p className='text-slate-200 font-sans'>{note.content}</p>
             </div>
             <div className="flex justify-end mt-4">
-                <NavLink to='/notes' className='bg-blue-500 text-white font-bold p-2 rounded-xl'>Back</NavLink>
+                <NavLink 
+                    to='/notes' 
+                    className='text-white font-bold p-2 rounded-xl hover:text-cyan-500 text-xl'
+                >
+                    <FontAwesomeIcon icon={faArrowRight}/>
+                </NavLink>
             </div>
         </div>
     );
